@@ -1,4 +1,4 @@
-####  Step 1 - Update System and Create User to run as VNC - Using Non GUI Ubuntu 20.04 and TightVNC
+#### Step 1 - Update System and Create User to run as VNC - Using Non GUI Ubuntu 20.04 and TightVNC
 sudo apt update &&  apt upgrade -y
 
 useradd -m -s /bin/bash vnc-user
@@ -9,12 +9,12 @@ usermod -a -G sudo vnc-user
 
 ssh vnc-user@ubuntu20.04
 
-#### - Step 2 – Install XFCE Desktop and TightVNC.  Linux has several desktop environments such as Gnome, Unity, KDE, LXDE, XFCE etc. For this tutorial, we will be using the XFCE desktop as our VNC desktop environment.
+#### Step 2 – Install XFCE Desktop and TightVNC.  Linux has several desktop environments such as Gnome, Unity, KDE, LXDE, XFCE etc. For this tutorial, we will be using the XFCE desktop as our VNC desktop environment.
 sudo apt install xfce4 xfce4-goodies
 
 sudo apt install -y tightvncserver
 
-#### - Step 3 – VNC Configuration for "vnc-user" user
+#### Step 3 – VNC Configuration for "vnc-user" user
 vncserver
 
 ps -ef | grep Xtightvnc
@@ -35,7 +35,7 @@ chmod +x ~/.vnc/xstartup
 
 vncserver
 
-#### - Step 4 – Running TightVNC as a Service
+#### Step 4 – Running TightVNC as a Service
 sudo su -
 
 cd /etc/systemd/system
