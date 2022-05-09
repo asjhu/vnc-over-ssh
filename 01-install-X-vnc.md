@@ -1,11 +1,8 @@
 #### Step 1 - Update System and Create User to run as VNC - Using Non GUI Ubuntu 20.04 and TightVNC
-sudo apt update &&  apt upgrade -y
-
+`sudo apt update &&  apt upgrade -y
 useradd -m -s /bin/bash vnc-user
-
 passwd vnc-user
-
-usermod -a -G sudo vnc-user
+usermod -a -G sudo vnc-user`
 
 ssh vnc-user@ubuntu20.04
 
